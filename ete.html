@@ -10,8 +10,10 @@ by egg.design  //
     but don't redistribute, use as a base, or claim as your own
     + please do not move or remove the credit
    
-Version 2.21 
-last updated jun. 2019
+Version 2.22
+last updated jun. 12  2019
+
+    - added option to turn off caption waves
 -->
  
 <!DOCTYPE html>
@@ -59,6 +61,7 @@ last updated jun. 2019
         <meta name="color:jump page" content="#529ecc" />
          <meta name="if:7th stripe" content=""/>
          <meta name="if:1st stripe" content="" />
+         <meta name="if:nocaptionwave" content='' />
  <meta name="text:asked" content="shouted" />
  <meta name="text:tag symbol" content="#" />
        <meta name="text:social media 1" content="twitter" />
@@ -215,9 +218,7 @@ font-family:Poppins;
   .photoz {
       background:{color:posts};
   }
-    .posts iframe {
-        width:calc(100% - 2px);
-    }
+
 
     .caption {
         position:relative;
@@ -235,6 +236,9 @@ font-family:Poppins;
         margin-top:-40px;
         left:0px;
         fill:white;
+        {block:ifnocaptionwave}
+        display:none;
+        {/block:ifnocaptionwave}
     }
     
     .reblog-content a {
